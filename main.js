@@ -1,4 +1,4 @@
-const API_KEY = '4b7f8c2572e9069ef60dd6d4005ba899';
+const API_KEY = process.env.weather_api_key;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 let currentUnit = 'metric'; // 'metric' for Celsius, 'imperial' for Fahrenheit
