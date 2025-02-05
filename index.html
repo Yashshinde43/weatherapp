@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+            
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name"
+                    autocomplete="off"
+                >
+                <button onclick="getWeather()"><i class="fas fa-search"></i></button>
+                <button onclick="getCurrentLocation()" class="location-btn" title="Get Current Location">
+                    <i class="fas fa-location-dot"></i>
+                </button>
+            </div>
+
+            <div class="unit-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="unitToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="unit-label">°C / °F</span>
+            </div>
+
+            <div id="error" class="error"></div>
+
+            <div id="weather-container" class="weather-container">
+                <div class="weather-info">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                    <h2 id="city-name"></h2>
+                    <div class="weather-details">
+                        <div class="temp-container">
+                            <p id="temperature" class="temperature"></p>
+                            <p id="feels-like" class="feels-like"></p>
+                        </div>
+                        <p id="condition" class="condition"></p>
+                        <div class="additional-info">
+                            <div class="info-item">
+                                <i class="fas fa-tint"></i>
+                                <p id="humidity"></p>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-wind"></i>
+                                <p id="wind-speed"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
